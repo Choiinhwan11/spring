@@ -1,0 +1,6 @@
+
+u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ï÷Ê8±¦¾öé1
+^
+java:S1128"ARemove this unused import 'org.apache.ibatis.annotations.Mapper'.(à©•ù8¿¦ÜËê1
+d
+java:S1128"BRemove this unused import 'org.mybatis.spring.SqlSessionTemplate'.(Æ¸–âüÿÿÿÿ8¿¦ÜËê1

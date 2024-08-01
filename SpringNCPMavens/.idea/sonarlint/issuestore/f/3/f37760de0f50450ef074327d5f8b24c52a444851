@@ -1,0 +1,6 @@
+
+X
+java:S6813!"BRemove this field injection and use constructor injection instead.(êæÄŞ
+s
+java:S3305""XInject this field value directly into "sqlSessionFactory", the only method that uses it.(î‡²şÿÿÿÿ
+Q	java:S1254"<This block of commented-out lines of code should be removed.(»¤ÿ—

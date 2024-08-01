@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<context:component-scan base-package="SpringConf"/>
+	<context:component-scan base-package="Chapter04_ANNO.userbean"/>
+	<context:component-scan base-package="Chapter04_ANNO.userdao"/>
+	<context:component-scan base-package="Chapter04_ANNO.usermain"/>
+
+
+
+
+
+
+	<!-- Chapter02_XML sample02	-->
+<!--	<bean id="calcAdd2" class="Chapter02_XML.sample02.CalcAdd">
+		<constructor-arg  value="25" />
+		<constructor-arg  value="36" />
+	</bean>
+	<bean id="calcMul2" class="Chapter02_XML.sample02.CalcMul">
+		<property name="x" value="25" /> name은 여기서 setter를 의미 &ndash;&gt;
+		<property name="y" value="36" />
+	</bean>-->
+<!--	<context:component-scan base-package="Chapter02_ANNO.sample02" />-->
+
+
+	<!-- Chapter02_XML.sample03	-->
+<!--<bean id="sungJukDTO" class="Chapter02_XML.sample03.SungJukDTO" >
+	<property name="name" value="홍길동" />
+	<property name="kor" value="97" />
+	<property name="eng" value="100" />
+	<property name="math" value="95" />
+</bean>
+<bean id="sungJukImpl" class="Chapter02_XML.sample03.SungJukImpl" >
+	<constructor-arg ref="sungJukDTO"/>
+</bean>-->
+
+<!-- Chpater02_ANNO.sample03	-->
+<context:component-scan base-package="Chapter02_ANNO.sample03"/>
+
+<!-- Chpater02_ANNO.spring.conf	-->
+<context:component-scan base-package="Chapter02_ANNO.spring.conf"/>
+
+<!-- Chapter02_XML.sample04-->
+<!--<bean id="arrayList" class="java.util.ArrayList" />
+&lt;!&ndash;<util:list id="list" list-class="java.util.ArrayList"/>&ndash;&gt;
+<bean id="sungJukDTO2" class="Chapter02_XML.sample04.SungJukDTO2" scope="prototype">
+
+</bean>
+<bean id="sungJukInput" class="Chapter02_XML.sample04.SungJukInput"  scope="prototype" >
+	<property name="sungJukDTO2" ref="sungJukDTO2"/>
+	<property name="list" ref="arrayList"/>
+</bean>
+<bean id="sungJukOutput" class="Chapter02_XML.sample04.SungJukOutput">
+	<property name="list" ref="arrayList"/>
+</bean>
+<bean id="sungJukUpdate" class="Chapter02_XML.sample04.SungJukUpdate">
+	<property name="list" ref="arrayList"/>
+</bean>
+<bean id="sungJukDelete" class="Chapter02_XML.sample04.SungJukDelete">
+	<property name="list" ref="arrayList"/>
+</bean>
+
+<bean id="helloSpring" class="Chapter02_XML.sample04.HelloSpring" />-->
+<context:component-scan base-package="Chapter02_ANNO.sample04"/>
+<!--	Chapter01_ANNO	-->
+<!--	<context:component-scan base-package="Chapter01_ANNO.sample03" />-->
+<!--	<context:component-scan base-package="Chapter01_ANNO.sample04" />-->
+<!--	<context:component-scan base-package="Chapter01_ANNO.sample05" />-->
+	<!-- sample03 -->
+	<!-- 유효범위
+		scope : prototype
+				request
+				session
+				singleton
+	 -->
+<!--	<bean id="messageBean" class="Chapter01_XML.sample03.MessageBeanKo" scope="prototype"/>-->
+	
+	<!-- sample04 -->
+<!--	<bean id="calcAdd" class="Chapter01_XML.sample04.CalcAdd" />-->
+<!--	<bean id="calcMul" class="Chapter01_XML.sample04.CalcMul" />-->
+	
+	<!-- sample05 -->
+<!--	<bean id="sungJukImpl" class="Chapter01_XML.sample05.SungJukImpl"/>-->
+
+
+	<!-- Chapter02_XML-->
+	<!-- sample05 -->
+
+	<bean id="messageBeanImpl2" class="Chapter02_XML.sample05.MessageBeanImpl">
+		<constructor-arg value="홍길동"/>
+		<property name="phone" value="010-1234-5678" />
+		<property name="outputter" ref="fileOutputter" />
+	</bean>
+	<bean id="fileOutputter" class="Chapter02_XML.sample05.FileOutputter">
+		<property name="filePath" value="D:/Spring/" /> <!-- 파일의 경로는 \\ 역슬래시 두번 쓰거나 그냥 / 쓴다-->
+		<property name="fileName" value="result.txt" />
+	</bean>
+
+	<bean id="helloSpring" class="Chapter05_XML.usermain.HelloSpring"/>
+</beans>

@@ -1,0 +1,24 @@
+
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ãÏ§½8ÛÊÏ¹å1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ê¯Áé8ÛÊÏ¹å1
+i
+java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(ÈÒ‹Ü8ÛÊÏ¹å1
+H
+java:S1172"+Remove this unused method parameter "args".(Î½ºğ8–×¹å1
+L	java:S106
+"+Replace this use of System.out by a logger.(³Ùˆõùÿÿÿÿ8ßÊÏ¹å1
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ì¸ïÛıÿÿÿÿ8ßÊÏ¹å1
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(™ó†ıÿÿÿÿ8ßÊÏ¹å1
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÈÒ‹Ü8àÊÏ¹å1
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±ÈÓñûÿÿÿÿ8àÊÏ¹å1
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ìóÄ8ÙùÏ¹å1
+q
+java:S1845"ORename method "power" to prevent any misunderstanding/clash with field "power".(Ì¸ïÛıÿÿÿÿ8àÊÏ¹å1
+u
+java:S1845"SRename method "channel" to prevent any misunderstanding/clash with field "channel".(™ó†ıÿÿÿÿ8àÊÏ¹å1
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÈÒ‹Ü8áÊÏ¹å1

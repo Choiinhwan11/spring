@@ -1,0 +1,10 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(øÓ¼ûÿÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(ýÞÝóüÿÿÿÿ
+>	java:S106"+Replace this use of System.out by a logger.(ö…e
+@	java:S106"+Replace this use of System.out by a logger.(¾àœ´
+E	java:S106"+Replace this use of System.out by a logger.(Ð¤®Äøÿÿÿÿ
+@	java:S106'"+Replace this use of System.out by a logger.(€š±ì
+E	java:S106,"+Replace this use of System.out by a logger.(§àµ¸øÿÿÿÿ
+J
+java:S1068	"/Remove this unused "sungJukDTO2" private field.(‚ë²æýÿÿÿÿ

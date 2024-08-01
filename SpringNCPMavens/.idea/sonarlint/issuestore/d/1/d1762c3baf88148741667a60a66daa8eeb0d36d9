@@ -1,0 +1,18 @@
+
+a	java:S112¡"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112¨"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+3
+java:S1643¤"Use a StringBuilder instead.(ìãä×
+€
+java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+Q	java:S125,"<This block of commented-out lines of code should be removed.(İì¿
+Q	java:S125P"<This block of commented-out lines of code should be removed.(İì¿
+F	java:S106‰"+Replace this use of System.out by a logger.(¿ÓŒßÿÿÿÿÿ
+@	java:S106•"+Replace this use of System.out by a logger.(¥„´
+W	java:S125—"<This block of commented-out lines of code should be removed.(­îõ¦ûÿÿÿÿ
+F	java:S106â"+Replace this use of System.out by a logger.(¹œ—´øÿÿÿÿ
+A	java:S106í"+Replace this use of System.out by a logger.(Òà´Ç

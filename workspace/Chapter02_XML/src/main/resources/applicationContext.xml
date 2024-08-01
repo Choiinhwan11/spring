@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- sample01 -->
+	<bean id="messageBeanImpl" class="sample01.MessageBeanImpl">
+		<constructor-arg>
+			<value>사과</value>
+		</constructor-arg>
+		<property name="cost">
+			<value>5000</value>
+		</property>
+		<property name="qty" value="3" />
+	</bean>
+
+	<!-- sample02 -->
+	<bean id="calcSub" class="sample02.CalcSub">
+		<constructor-arg value="25" />
+		<constructor-arg value="36" />
+	</bean>
+	<bean id="calcDiv" class="sample02.CalcDiv" scope="prototype">
+		<property name="x" value="25" />
+		<property name="y" value="36" />
+	</bean>
+
+	<!-- sample03 -->
+	<bean id="sungJukDTO" class="sample03.SungJukDTO">
+		<property name="name" value="홍길동" />
+		<property name="kor" value="97" />
+		<property name="eng" value="100" />
+		<property name="math" value="95" />
+	</bean>
+
+	<bean id="sungJukImpl" class="sample03.SungJukImpl">
+		<constructor-arg ref="sungJukDTO" />
+	</bean>
+
+	<!-- sample04 -->
+    <bean id="sungJukDTO2" class="sample04.SungJukDTO2" />
+
+    <bean id="sungJukList" class="java.util.ArrayList" />
+
+    <bean id="sungJukInput" class="sample04.SungJukInput">
+        <constructor-arg ref="sungJukDTO2" />
+        <constructor-arg ref="sungJukList" />
+    </bean>
+
+    <bean id="sungJukOutput" class="sample04.SungJukOutput">
+        <constructor-arg ref="sungJukList" />
+    </bean>
+
+    <bean id="sungJukUpdate" class="sample04.SungJukUpdate">
+        <constructor-arg ref="sungJukDTO2" />
+        <constructor-arg ref="sungJukList" />
+    </bean>
+
+    <bean id="sungJukDelete" class="sample04.SungJukDelete">
+        <constructor-arg ref="sungJukDTO2" />
+        <constructor-arg ref="sungJukList" />
+    </bean>
+
+
+	<!--sample 05-->
+	<bean id="fileOutputter" class="sample05.FileOutputter">
+		<property name="filePath" value="D:/Spring/"/>
+		<property name="fileName" value="result.txt"/>
+	</bean>
+
+	<bean id="messageBeanImpl2" class="sample05.MessageBeanImpl">
+		<constructor-arg value="홍길동"/>
+		<property name="phone" value="010-1234-5678"/>
+		<property name="outputter" ref="fileOutputter"/>
+
+	</bean>
+</beans>
+
+<!-- MessageBeanImpl messageBeanImpl = new MessageBeanImpl(사과); messageBeanImpl.setCost(5000); 
+	messageBeanImpl.setQty(3); -->

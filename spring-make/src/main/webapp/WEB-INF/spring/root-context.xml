@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd">
+
+    <context:component-scan base-package="com.i.miniTravel.Config"/>
+    <context:component-scan base-package="com.i.miniTravel.Controllers.Member"/>
+    <context:component-scan base-package="com.i.miniTravel.Domains"/>
+    <context:component-scan base-package="com.i.miniTravel.DTORequest.Member"/>
+    <context:component-scan base-package="com.i.miniTravel.DTOResponse.Member"/>
+    <context:component-scan base-package="com.i.miniTravel.Repositorys.Member"/>
+    <context:component-scan base-package="com.i.miniTravel.Service.Member"/>
+
+    <!-- SpringConfiguration.java 에서도 설정했음-->
+<!--    <mybatis-spring:scan base-package="user.dao"/>-->
+</beans>

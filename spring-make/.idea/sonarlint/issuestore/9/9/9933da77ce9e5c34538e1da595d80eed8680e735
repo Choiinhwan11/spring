@@ -1,0 +1,10 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¯À„8Áù‘”ê1
+_
+java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8Èù‘”ê1
+z
+java:S3305!"XInject this field value directly into "sqlSessionFactory", the only method that uses it.(î‡²şÿÿÿÿ8Êù‘”ê1
+X	java:S1253"<This block of commented-out lines of code should be removed.(»¤ÿ—8Òù‘”ê1
+]	java:S1258"<This block of commented-out lines of code should be removed.(Õº³ÿÿÿÿÿ8Ë¾Á”ê1
+g
+java:S1128"ERemove this unused import 'org.mybatis.spring.annotation.MapperScan'.(½‡ö–şÿÿÿÿ8Õù‘”ê1

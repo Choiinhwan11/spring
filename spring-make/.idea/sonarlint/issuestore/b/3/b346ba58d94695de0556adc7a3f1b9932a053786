@@ -1,0 +1,7 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íİ½8Ä—­äé1
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂêÌ·8È—­äé1
+n
+java:S1128"QRemove this unused import 'com.i.miniTravel.DTORequest.Member.MemberJoinRequest'.(·àµ¿8Æœ•ê1
+p
+java:S1128"NRemove this unused import 'com.i.miniTravel.Service.Member.MemberJoinService'.(©¤§Æúÿÿÿÿ8Æœ•ê1

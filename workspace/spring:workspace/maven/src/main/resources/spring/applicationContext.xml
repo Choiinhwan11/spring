@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Connection Pool & DataSource -->
+   <!-- <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/mydb?serverTimezone=Asia/Seoul"/>
+        <property name="username" value="root"/>
+        <property name="password" value="1234"/>
+    </bean>-->
+
+   <!-- <bean id="dataSource"
+          class="org.apache.commons.dbcp2.BasicDataSource"
+          p:driverClassName="com.mysql.cj.jdbc.Driver"
+          p:url="jdbc:mysql://localhost:3306/mydb?serverTimezone=Asia/Seoul"
+          p:username="root"
+          p:password="1234"
+    />-->
+
+    <!--<context:property-placeholder location="classpath:spring/db.properties"/>
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>-->
+
+<!--    <bean id="helloSpring" class="Chapter04_XML.usermain.HelloSpring"></bean>-->
+    <!--<bean id="userInsertService" class="Chapter04_XML.userservice.UserInsertService">
+        <property name="userDTO" ref="userDTO" />
+        <property name="userDAO" ref="userDAOImpl" />
+    </bean>-->
+   <!-- <bean id="userSelectService" class="Chapter04_XML.userservice.UserSelectService">
+        <property name="userDAO" ref="userDAOImpl" />
+    </bean>-->
+   <!-- <bean id="userUpdateService" class="Chapter04_XML.userservice.UserUpdateService">
+        <property name="userDAO" ref="userDAOImpl" />
+    </bean>-->
+  <!--  <bean id="userDeleteService" class="Chapter04_XML.userservice.UserDeleteService">
+        <property name="userDAO" ref="userDAOImpl" />
+    </bean>-->
+
+<!--    <bean id="userDTO" class="Chapter04_XML.userbean.UserDTO" />-->
+  <!--  <bean id="userDAOImpl" class="Chapter04_XML.userdao.UserDAOImpl">
+      &lt;!&ndash;  <property name="jdbcTemplate" ref="jdbcTemplate" />&ndash;&gt;
+        <property name="dataSource" ref="dataSource" />
+    </bean>-->
+
+   <!-- <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <constructor-arg ref="dataSource" /> &lt;!&ndash; Connection Pool을 줘야한다.&ndash;&gt;
+    </bean>-->
+    <context:component-scan base-package="Chapter04_ANNO.spring.conf"/>
+    <context:component-scan base-package="Chapter04_ANNO"/>
+</beans>
+
+
+<!--
+    classpath:
+    :까지 포함. 은 src/main/resources 를 의미한다.
+-->

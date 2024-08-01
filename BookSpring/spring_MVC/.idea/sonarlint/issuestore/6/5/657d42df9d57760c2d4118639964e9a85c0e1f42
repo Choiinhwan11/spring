@@ -1,0 +1,10 @@
+
+Ë
+java:S1598"¯This file "SumController.java" should be located in "Chater06_1/com/controller" directory, not in "/Users/choiinhwan/Desktop/BookSpring/spring_MVC/Chapter06_1/com/controller".(¢­õ÷üÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¢­õ÷üÿÿÿÿ
+P
+java:S1854":Remove this useless assignment to local variable "result".(ÄÚÆ‡
+A
+java:S1481"+Remove this unused "result" local variable.(ÄÚÆ‡
+1
+java:S3626"Remove this redundant jump.(ûÁÝ…

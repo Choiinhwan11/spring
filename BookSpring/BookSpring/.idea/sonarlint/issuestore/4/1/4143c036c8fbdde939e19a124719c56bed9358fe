@@ -1,0 +1,8 @@
+
+D
+java:S2189	""Add an end condition to this loop.(п€ћяяяяя8ЊСфвг1
+X
+java:S1854"6Remove this useless assignment to local variable "id".(Ё° Фщяяяя8ЌСфвг1
+G	java:S106"+Replace this use of System.out by a logger.(яѓ¤ћ8ђСфвг1
+I
+java:S1481"'Remove this unused "id" local variable.(Ё° Фщяяяя8ђСфвг1

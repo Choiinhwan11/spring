@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+    <context:component-scan base-package="Chapter05_ANNO.spring.conf"/>
+    <context:component-scan base-package="Chapter05_ANNO.userbean"/>
+    <context:component-scan base-package="Chapter05_ANNO.userdao"/>
+    <context:component-scan base-package="Chapter05_ANNO.usermain"/>
+    <context:component-scan base-package="Chapter05_ANNO.userservice"/>
+<!--    <tx:annotation-driven transaction-manager="transactionManager" />-->
+
+    <!--
+
+    &lt;!&ndash; Conneciton Pool & DataSource &ndash;&gt;
+    <context:property-placeholder location="classpath:Chapter05_ANNO/spring/db.properties"/>
+       <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+           <property name="driverClassName" value="${jdbc.driver}"/>
+           <property name="url" value="${jdbc.url}"/>
+           <property name="username" value="${jdbc.username}"/>
+           <property name="password" value="${jdbc.password}"/>
+       </bean>
+    &lt;!&ndash; SqlSessionFactory &ndash;&gt;
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mapperLocations" value="classpath:Chapter05_ANNO/mapper/userMapper.xml"/>
+        <property name="configLocation" value="classpath:Chapter05_ANNO/spring/mybatis-config.xml"/>
+    </bean>
+
+    &lt;!&ndash; SqlSession &ndash;&gt;
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg ref="sqlSessionFactory"/>
+    </bean>
+
+    &lt;!&ndash;Transaction 이 필요하다 &ndash;&gt;
+    &lt;!&ndash;insert select update delete 하고 마지막에 commit 해야된다.  sqlSession.commit() / sqlSession.close()&ndash;&gt;
+    &lt;!&ndash;이제 Spring이 commit 알아서 하라고 써줘야함 => AOP 사용 &ndash;&gt;
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <constructor-arg ref="dataSource" />
+    </bean>
+-->
+
+
+    <!-- -->
+  <!--  <bean id="helloSpring" class="Chapter05_ANNO.usermain.HelloSpring" />
+
+    <bean id="userInsertService" class="Chapter05_ANNO.userservice.UserInsertService">
+        <property name="userDTO" ref="userDTO"/>
+        <property name="userDAO" ref="userDAOMyBatis" />
+    </bean>
+
+    <bean id="userSelectService" class="Chapter05_ANNO.userservice.UserSelectService">
+        <property name="userDAO" ref="userDAOMyBatis"/>
+    </bean>
+
+    <bean id="userUpdateService" class="Chapter05_ANNO.userservice.UserUpdateService">
+        <property name="userDAO" ref="userDAOMyBatis" />
+    </bean>
+
+    <bean id="userDeleteService" class="Chapter05_ANNO.userservice.UserDeleteService">
+        <property name="userDAO" ref="userDAOMyBatis" />
+    </bean>
+
+    <bean id="userDTO" class="Chapter05_ANNO.userbean.UserDTO" />
+
+    <bean id="userDAOMyBatis" class="Chapter05_ANNO.userdao.UserDAOMyBatis">
+        <property name="sqlSession" ref="sqlSession" />
+    </bean>-->
+</beans>

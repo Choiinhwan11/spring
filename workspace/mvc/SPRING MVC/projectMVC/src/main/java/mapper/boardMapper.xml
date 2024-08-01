@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="boardSQL">
+  	<insert id="insertBoard" parameterType="map">
+  	
+  		<selectKey resultType="int" keyProperty="ref" order="BEFORE">
+  			select MAX(seq) + 1 from board
+  		</selectKey>
+  		insert into board( id, name, email, subject, content, ref) 
+  		values ( #{id}, #{name}, #{email}, #{subject}, #{content}, #{ref})
+  		<!-- ${ref} 대신에  LAST_INSERT_ID()를 쓰면 서버를 재가동했을 시에 0으로 초기화 되기 때문에 
+  		 마지막 INSERT 값이 없으면 INCREMENT값을 가져오지 못한다. -->
+  	</insert>
+  	<select id="boardList" parameterType="map" resultType="board">
+				   select * from board order by ref desc, step asc limit ${startNum-1}, 5 
+  	</select> 
+  	
+  	<select id="getTotalA" resultType="int">
+  		select count(*) from board
+  	</select>
+  	<!-- 1개의 글보기 -->
+  	<select id="getBoard" parameterType="int" resultType="board">
+  		select * from board where seq=#{seq}
+  	</select>
+  	<update id="updateBoard" parameterType="map">
+  		update board set subject=#{subject}, content=#{content}, logtime=now() where seq=${seq}
+  	</update>
+  	<update id="boardReplyStep" parameterType="board">
+  		update board set step=step + 1 where ref=#{ref} and step > #{step}
+  	</update>
+  	
+  	<update id="boardReply" parameterType="java.util.Map">
+  		insert into board (id, name, email, subject, content, ref, lev, step, pseq, reply, hit, logtime) 
+  					values(
+  									#{id},
+                                    #{name},
+                                    #{email},
+                                    #{subject},
+                                    #{content},
+                                    #{ref},
+                                    #{lev},
+                                    #{step},
+                                    #{pseq},
+                                    0,
+                                    0,
+                                    NOW());
+  	</update>
+  	<update id="boardReplyReply" parameterType="int">
+  		update board set reply = reply + 1 where seq = ${pseq}
+  	</update>
+  	
+  	
+  <!-- 	<update id="boardDeleteSeq" parameterType="int">
+  		update board set reply = reply - 1 where seq = ${pseq}
+  	</update>
+  	<update id="boardDeleteSubject" parameterType="int">
+  		update board set subject = '[원글이 삭제된 답글]' || subject where pseq = ${seq}
+  	</update>
+  	<delete id="boardDelete" parameterType="int" >
+  		delete  from board where seq = ${seq}
+  	</delete> -->
+  	
+  	<sql id="boardDeleteProcedure">
+  		create procedure boardDelete(in seq_val BIGINT)
+  		begin
+  			UPDATE board set reply=reply-1
+  			where seq=(select pseq from board where seq=seq_val);
+  			
+  			UPDATE BOARD SET SUBJECT = concat('[원글이 삭제된 답글]', SUBJECT) WHERE PSEQ=seq_val;
+  			
+  			DELETE from board where SEQ=seq_val;
+  		end
+  	</sql>
+  	
+  	<!-- boardDelete 프로시저 호출 -->
+  	<delete id="boardDelete" statementType="CALLABLE">
+  		{call boardDelete(#{seq})}
+  	</delete>
+  	
+  </mapper>

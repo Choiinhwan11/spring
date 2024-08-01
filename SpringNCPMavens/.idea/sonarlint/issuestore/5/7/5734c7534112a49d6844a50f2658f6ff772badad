@@ -1,0 +1,13 @@
+
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+P
+java:S1854B":Remove this useless assignment to local variable "endNum".(Ê¬ØÄ
+V	java:S125""<This block of commented-out lines of code should be removed.(é¶ş†ùÿÿÿÿ
+A
+java:S1481B"+Remove this unused "endNum" local variable.(Ê¬ØÄ
+?	java:S106E"+Replace this use of System.out by a logger.(ã§Úp
+E	java:S106I"+Replace this use of System.out by a logger.(ã¿¢Ôùÿÿÿÿ
+Q	java:S125W"<This block of commented-out lines of code should be removed.(ŒŞÇÓ
